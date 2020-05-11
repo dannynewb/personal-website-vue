@@ -1,3 +1,3 @@
-# Personal Website Vue
+# Personal Website
 
-A copy of my personal website but built using vue.js.
+Personal website but build with Vue.js.

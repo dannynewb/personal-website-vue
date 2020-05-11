@@ -1,0 +1,9 @@
+html,
+body {
+  height: 100%;
+  background-color: #f9f9f9;
+}
+
+.blue-jeans {
+    background-color: #04619f !important;
+}
