@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar">
     <div class="container">
-      <div class="navbar-brand" :style="{backgroundColor: hex}">
+      <div class="navbar-brand transition" :style="{backgroundColor: hex}">
         <div class="dropdown is-hoverable">
           <div class="dropdown-trigger">
             <a
@@ -40,12 +40,12 @@
       <div id="navbar-menu" role="navigation" class="navbar-menu">
         <div class="navbar-end">
           <router-link
-            class="navbar-item"
+            class="navbar-item transition"
             :style="[isCurrentPage('Landing') ? {backgroundColor: hex} : {backgroundColor: '#f9f9f9'}]"
             to="/"
           >Home</router-link>
           <router-link
-            class="navbar-item"
+            class="navbar-item transition"
             :style="[isCurrentPage('BrainDump') ? {backgroundColor: hex} : {backgroundColor: '#f9f9f9'}]"
             to="/brainDump"
           >Brain Dump</router-link>

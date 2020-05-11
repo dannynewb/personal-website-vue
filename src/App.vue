@@ -4,7 +4,7 @@
       <div class="hero-head">
         <Navbar />
       </div>
-      <div class="hero-body" :style="{backgroundColor: hex}">
+      <div class="hero-body transition" :style="{backgroundColor: hex}">
         <div class="container">
           <router-view></router-view>
         </div>

@@ -4,6 +4,6 @@ body {
   background-color: #f9f9f9;
 }
 
-.blue-jeans {
-    background-color: #04619f !important;
+.transition {
+  transition: left 0s ease-in-out, background-color 1s ease-out 0s;
 }
