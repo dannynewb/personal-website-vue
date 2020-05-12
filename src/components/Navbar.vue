@@ -1,9 +1,9 @@
 <template>
   <nav class="navbar">
     <div class="container">
-      <div class="navbar-brand transition" :style="{backgroundColor: hex}">
+      <div class="navbar-brand transition">
         <div class="dropdown is-hoverable">
-          <div class="dropdown-trigger">
+          <div class="dropdown-trigger" :style="{backgroundColor: hex}">
             <a
               id="colour-picker"
               class="navbar-item"
@@ -31,13 +31,14 @@
           aria-label="menu"
           aria-expanded="false"
           data-target="navbar-menu"
+          @click="showMenu = !showMenu"
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
-      <div id="navbar-menu" role="navigation" class="navbar-menu">
+      <div id="navbar-menu" role="navigation" class="navbar-menu" v-bind:class="{ 'is-active': showMenu }">
         <div class="navbar-end">
           <router-link
             class="navbar-item transition"
@@ -60,6 +61,11 @@ import { mapState, mapMutations } from "vuex";
 
 export default {
   name: "Navbar",
+  data: function() {
+    return {
+      showMenu: false
+    }
+  },
   computed: mapState(["themeName", "hex"]),
   methods: {
     ...mapMutations(["switchTheme"]),
@@ -110,5 +116,9 @@ export default {
 
 a.navbar-item:focus, a.navbar-item:focus-within {
     color: #FFFFFF;
+}
+
+.navbar-burger {
+    height: inherit; 
 }
 </style>
