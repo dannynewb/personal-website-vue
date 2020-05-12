@@ -65,7 +65,7 @@
     <div class="tile is-parent is-vertical">
       <div class="tile is-child box">
         <p class="title">What am I up to?</p>
-        <div v-for="event in gitActivity.slice(0, 6)" :key="event.id">
+        <div v-for="event in gitActivity.slice(0, 5)" :key="event.id">
           <div v-if="event.type == 'PushEvent'">
             <article class="media box has-vertical-center">
               <figure class="media-left">
@@ -233,6 +233,10 @@ export default {
 
 .media.box {
   padding: 0.5rem;
+}
+
+.card-content {
+  padding: 0.8rem;
 }
 
 .git-message {
