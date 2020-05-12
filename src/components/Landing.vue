@@ -65,9 +65,9 @@
     <div class="tile is-parent is-vertical">
       <div class="tile is-child box">
         <p class="title">What am I up to?</p>
-        <div v-for="event in gitActivity.slice(0, 5)" :key="event.id">
+        <div v-for="event in gitActivity.slice(0, 6)" :key="event.id">
           <div v-if="event.type == 'PushEvent'">
-            <article class="media box is-vertical-centered">
+            <article class="media box has-vertical-center">
               <figure class="media-left">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 16" width="20" height="22">
                   <path
@@ -81,14 +81,16 @@
                   I've pushed changes to
                   {{ event.payload.ref.split('/')[2] }}
                   at
-                  <a v-bind:href="'https://github.com/' + event.repo.name">{{ event.repo.name }}</a>
+                  <a
+                    v-bind:href="'https://github.com/' + event.repo.name"
+                  >{{ event.repo.name }}</a>
                 </p>
                 <p class="git-message">{{ event.payload.commits[0].message }}</p>
               </div>
             </article>
           </div>
           <div v-if="event.type == 'CreateEvent'">
-            <article class="media box is-vertical-centered">
+            <article class="media box has-vertical-center">
               <figure class="media-left">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 16" width="20" height="26">
                   <path
@@ -100,7 +102,9 @@
               <div class="media-content">
                 <p>
                   I've created branch {{ event.payload.master_branch }} at
-                  <a v-bind:href="'https://github.com/' + event.repo.name">{{ event.repo.name }}</a>
+                  <a
+                    v-bind:href="'https://github.com/' + event.repo.name"
+                  >{{ event.repo.name }}</a>
                 </p>
                 <p class="git-message">{{ event.payload.description }}</p>
               </div>
@@ -114,7 +118,7 @@
         <p class="title">Work Experience</p>
         <div class="card">
           <div class="card-content">
-            <div class="media">
+            <div class="media has-vertical-center">
               <div class="media-left">
                 <figure class="image is-64x64">
                   <img
@@ -126,13 +130,17 @@
               <div class="media-content">
                 <p class="title is-4">APD Communications</p>
                 <p class="subtitle is-6">Senior Software Engineer</p>
+                <div class="tags">
+                  <span class="tag">C#</span>
+                  <span class="tag">WPF</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
-            <div class="media">
+            <div class="media has-vertical-center">
               <div class="media-left">
                 <figure class="image is-64x64">
                   <img src="../assets/ecm.png" alt="ECM Systems" />
@@ -141,13 +149,20 @@
               <div class="media-content">
                 <p class="title is-4">ECM Systems Ltd</p>
                 <p class="subtitle is-6">Software Developer</p>
+                <div class="tags">
+                  <span class="tag">C#</span>
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">Javascript</span>
+                  <span class="tag">Typescript</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
-            <div class="media">
+            <div class="media has-vertical-center">
               <div class="media-left">
                 <figure class="image is-64x64">
                   <img src="../assets/bw.jpg" alt="Best Western GB" />
@@ -156,6 +171,12 @@
               <div class="media-content">
                 <p class="title is-4">Best Western GB</p>
                 <p class="subtitle is-6">Junior Software Developer</p>
+                <div class="tags">
+                  <span class="tag">C#</span>
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">Javascript</span>
+                </div>
               </div>
             </div>
           </div>
@@ -216,11 +237,5 @@ export default {
 
 .git-message {
   font-size: 0.7rem;
-}
-
-.is-vertical-centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 </style>
