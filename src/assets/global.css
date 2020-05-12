@@ -7,3 +7,9 @@ body {
 .transition {
   transition: left 0s ease-in-out, background-color 1s ease-out 0s;
 }
+
+.has-vertical-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

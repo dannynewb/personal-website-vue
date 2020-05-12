@@ -61,10 +61,6 @@ export default {
 </script>
 
 <style scoped>
-.logo {
-  color: unset;
-}
-
 .card-content {
   padding: 0.8rem;
 }

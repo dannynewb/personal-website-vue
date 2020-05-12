@@ -87,6 +87,10 @@ export default {
 </script>
 
 <style scoped>
+.logo {
+  color: unset;
+}
+
 #facebook-icon:hover {
   color: #3b5998;
 }
@@ -101,11 +105,5 @@ export default {
 
 #email-icon:hover {
   color: #2ebfa5;
-}
-
-.has-vertical-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 </style>
