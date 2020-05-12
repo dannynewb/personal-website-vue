@@ -23,6 +23,9 @@ Vue.prototype.$https = axios
 
 new Vue({
   store,
+  beforeCreate() {
+		this.$store.commit('initialiseStore');
+	},
   router,
   render: h => h(App),
 }).$mount('#app')

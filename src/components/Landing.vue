@@ -131,8 +131,8 @@
                 <p class="title is-4">APD Communications</p>
                 <p class="subtitle is-6">Senior Software Engineer</p>
                 <div class="tags">
-                  <span class="tag">C#</span>
-                  <span class="tag">WPF</span>
+                  <span class="tag transition" :style="{backgroundColor: hex}">C#</span>
+                  <span class="tag transition" :style="{backgroundColor: hex}">WPF</span>
                 </div>
               </div>
             </div>
@@ -150,11 +150,11 @@
                 <p class="title is-4">ECM Systems Ltd</p>
                 <p class="subtitle is-6">Software Developer</p>
                 <div class="tags">
-                  <span class="tag">C#</span>
-                  <span class="tag">HTML</span>
-                  <span class="tag">CSS</span>
-                  <span class="tag">Javascript</span>
-                  <span class="tag">Typescript</span>
+                  <span class="tag transition" :style="{backgroundColor: hex}">C#</span>
+                  <span class="tag transition" :style="{backgroundColor: hex}">HTML</span>
+                  <span class="tag transition" :style="{backgroundColor: hex}">CSS</span>
+                  <span class="tag transition" :style="{backgroundColor: hex}">Javascript</span>
+                  <span class="tag transition" :style="{backgroundColor: hex}">Typescript</span>
                 </div>
               </div>
             </div>
@@ -172,10 +172,10 @@
                 <p class="title is-4">Best Western GB</p>
                 <p class="subtitle is-6">Junior Software Developer</p>
                 <div class="tags">
-                  <span class="tag">C#</span>
-                  <span class="tag">HTML</span>
-                  <span class="tag">CSS</span>
-                  <span class="tag">Javascript</span>
+                  <span class="tag transition" :style="{backgroundColor: hex}">C#</span>
+                  <span class="tag transition" :style="{backgroundColor: hex}">HTML</span>
+                  <span class="tag transition" :style="{backgroundColor: hex}">CSS</span>
+                  <span class="tag transition" :style="{backgroundColor: hex}">Javascript</span>
                 </div>
               </div>
             </div>
@@ -188,6 +188,7 @@
 
 <script>
 import axios from "axios";
+import { mapState } from "vuex";
 
 export default {
   name: "Landing",
@@ -196,6 +197,7 @@ export default {
       gitActivity: null
     };
   },
+  computed: mapState(["themeName", "hex"]),
   mounted() {
     axios
       .get("https://api.github.com/users/dannynewb/events/public")
@@ -241,5 +243,9 @@ export default {
 
 .git-message {
   font-size: 0.7rem;
+}
+
+.tag {
+  color: #FFFFFF;
 }
 </style>

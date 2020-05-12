@@ -25,7 +25,17 @@ export default new Vuex.Store({
       hex: theme[defaultTheme].hex,
     },
     mutations: {
+      initialiseStore(state) {
+        var selectedTheme = localStorage.getItem('theme');
+
+        if (selectedTheme != null || selectedTheme != 'null') {
+          state.themeName = theme[selectedTheme].themeName;
+          state.hex = theme[selectedTheme].hex;
+        }
+      },
       switchTheme(state, themeName) {
+        localStorage.setItem('theme', themeName);
+
         state.themeName = theme[themeName].themeName;
         state.hex = theme[themeName].hex;
       }
