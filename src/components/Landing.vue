@@ -194,7 +194,7 @@ export default {
   name: "Landing",
   data() {
     return {
-      gitActivity: null
+      gitActivity: []
     };
   },
   computed: mapState(["themeName", "hex"]),

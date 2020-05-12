@@ -28,10 +28,12 @@ export default new Vuex.Store({
       initialiseStore(state) {
         var selectedTheme = localStorage.getItem('theme');
 
-        if (selectedTheme != null || selectedTheme != 'null') {
-          state.themeName = theme[selectedTheme].themeName;
-          state.hex = theme[selectedTheme].hex;
+        if (selectedTheme == null || selectedTheme == 'null') {
+          return;
         }
+
+        state.themeName = theme[selectedTheme].themeName;
+        state.hex = theme[selectedTheme].hex;
       },
       switchTheme(state, themeName) {
         localStorage.setItem('theme', themeName);
