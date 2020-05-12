@@ -19,7 +19,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.use(Vuex);
 
 Vue.config.productionTip = false
-Vue.prototype.$http = axios
+Vue.prototype.$https = axios
 
 new Vue({
   store,
