@@ -32,6 +32,7 @@
           aria-expanded="false"
           data-target="navbar-menu"
           @click="showMenu = !showMenu"
+          v-bind:class="{ 'is-active': showMenu }"
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
