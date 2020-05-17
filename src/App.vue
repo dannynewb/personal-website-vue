@@ -1,18 +1,12 @@
 <template>
-  <div id="app">
-    <section class="hero is-fullheight-with-navbar">
-      <div class="hero-head">
-        <Navbar />
-      </div>
-      <div class="hero-body transition" :style="{backgroundColor: hex}">
-        <div class="container">
-          <router-view></router-view>
-        </div>
-      </div>
-      <div class="hero-foot">
-        <Footer />
-      </div>
-    </section>
+  <div id="app" :style="{backgroundColor: hex}">
+    <Navbar />
+
+    <div id="content" class="container">
+      <router-view></router-view>
+    </div>
+
+    <Footer />
   </div>
 </template>
 
@@ -32,7 +26,8 @@ export default {
 </script>
 
 <style scoped>
-.hero.is-fullheight-with-navbar {
-  min-height: calc(100vh - 0rem);
+#content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 </style>
