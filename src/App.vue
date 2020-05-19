@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :style="{backgroundColor: hex}">
+  <div id="app" class="transition" :style="{backgroundColor: hex}">
     <Navbar />
 
     <div id="content" class="container">

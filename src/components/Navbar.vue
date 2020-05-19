@@ -3,7 +3,7 @@
     <div class="container">
       <div class="navbar-brand transition">
         <div class="dropdown is-hoverable">
-          <div class="dropdown-trigger" :style="{backgroundColor: hex}">
+          <div class="dropdown-trigger transition" :style="{backgroundColor: hex}">
             <a
               id="colour-picker"
               class="navbar-item"
@@ -78,6 +78,11 @@ export default {
 </script>
 
 <style scoped>
+
+.navbar {
+  background-color: #f9f9f9;
+}
+
 #colour-palette {
   color: #ffffff;
 }
